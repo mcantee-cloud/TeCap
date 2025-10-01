@@ -1,0 +1,250 @@
+/* ===== Reset básico ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* ===== Body y colores ===== */
+body {
+    background-color: #121212;
+    color: #fff;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* ===== Enlaces ===== */
+a {
+    text-decoration: none;
+    color: #ff66ff;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #66ccff;
+}
+
+/* ===== Botones ===== */
+button, .btn {
+    background: linear-gradient(135deg, #66ccff, #ff66ff, #ff66cc);
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+/* ===== Navbar ===== */
+nav {
+    width: 100%;
+    padding: 15px 20px;
+    background: linear-gradient(90deg, #66ccff, #ff66ff);
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 5px 10px;
+}
+
+nav a {
+    font-weight: bold;
+    color: #fff;
+    font-size: 1rem;
+}
+
+/* ===== Hero Sections ===== */
+.inicio-hero, .tequila-hero, .capturando-hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 50%;
+    scroll-margin-top: 80px;
+}
+
+.inicio-hero {
+    background-image: url("../assets/img/inicio.jpg");
+}
+
+.tequila-hero {
+    background-image: url("../assets/img/tequila.jpg");
+}
+
+.capturando-hero {
+    background-image: url("../assets/img/capturando.jpg");
+}
+
+/* Overlay oscuro y desenfoque */
+.inicio-hero::before, .tequila-hero::before, .capturando-hero::before {
+    content: '';
+    position: absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    z-index:1;
+}
+
+/* Contenido centrado */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+/* ===== Animaciones ===== */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* ===== Secciones generales ===== */
+section {
+    padding: 100px 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ===== Tipografía principal ===== */
+h1 {
+    color: #ff66ff;
+    text-transform: uppercase;
+    font-size: 3rem;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+h2 {
+    color: #66ccff;
+    font-size: 2.2rem;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+h3 {
+    color: #ff66cc;
+    font-size: 1.8rem;
+    line-height: 1.3;
+}
+
+/* ===== Párrafos ===== */
+p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* ===== Cards ===== */
+.card {
+    background: linear-gradient(135deg, #66ccff, #ff66ff);
+    color: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 15px;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+/* ===== Footer ===== */
+footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #ff66ff;
+}
+
+footer a:hover {
+    color: #66ccff;
+}
+
+/* ===== Media queries ===== */
+@media (max-width: 1024px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.6rem; }
+    p { font-size: 1.1rem; }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .inicio-hero, .tequila-hero, .capturando-hero {
+        height: 80vh;
+        background-size: 120% auto;
+        background-position: center 40%;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.6rem; }
+    h3 { font-size: 1.4rem; }
+    p { font-size: 1rem; }
+    .btn { padding: 10px 20px; font-size: 0.95rem; }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.3rem; }
+    h3 { font-size: 1.1rem; }
+    p { font-size: 0.9rem; }
+    .btn { padding: 8px 16px; font-size: 0.9rem; }
+    section { padding: 60px 15px; }
+    .card { padding: 15px; font-size: 0.9rem; }
+}
+

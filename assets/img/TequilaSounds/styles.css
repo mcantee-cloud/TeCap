@@ -1,0 +1,112 @@
+/* RESET */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* NAV */
+header {
+  background: #111;
+  color: white;
+  padding: 15px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  height: 80vh;
+}
+.hero-left, .hero-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+.hero-left {
+  background: #0099A8; /* turquesa Tequila */
+}
+.hero-right {
+  background: linear-gradient(to bottom, #4DB6E5, #1A1A1A); /* Capturando */
+}
+
+/* SECCIONES */
+.tequila {
+  background: #111;
+  color: #E6398C; /* fucsia */
+  padding: 60px 20px;
+  text-align: center;
+}
+.capturando {
+  background: #f5faff;
+  color: #004466;
+  padding: 60px 20px;
+  text-align: center;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.card {
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 20px;
+  min-width: 200px;
+  color: white;
+}
+.tequila .card { background: #222; }
+.capturando .card { background: white; color: #004466; }
+
+/* CONTACTO */
+.contacto {
+  padding: 60px 20px;
+  background: #eee;
+  text-align: center;
+}
+form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+form input, form textarea {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+form button {
+  padding: 10px;
+  border: none;
+  background: #0099A8;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
